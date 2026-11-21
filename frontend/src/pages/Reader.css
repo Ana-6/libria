@@ -1,0 +1,245 @@
+.reader-page {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 35px 24px 60px;
+  color: #292a27;
+}
+
+.reader-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ded8cb;
+}
+
+.reader-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #536458;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.reader-book-heading {
+  text-align: center;
+}
+
+.reader-book-heading span {
+  color: #a18755;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.reader-book-heading h1 {
+  margin: 7px 0 0;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.reader-format {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+}
+
+.reader-format select {
+  padding: 9px 12px;
+  border: 1px solid #d8d0c1;
+  border-radius: 6px;
+  background: #fffdf8;
+  color: #292a27;
+}
+
+.reader-toolbar {
+  display: grid;
+  grid-template-columns: auto minmax(100px, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  margin: 22px 0;
+}
+
+.reader-progress-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+  color: #77766e;
+}
+
+.reader-progress-label strong {
+  color: #243a32;
+  font-size: 15px;
+}
+
+.reader-progress-track {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e8e2d7;
+}
+
+.reader-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #718573;
+  transition: width 0.2s ease;
+}
+
+.reader-save-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #77766e;
+  font-size: 12px;
+}
+
+.reader-viewer {
+  display: flex;
+  justify-content: center;
+  min-height: 650px;
+  padding: 30px 15px;
+  overflow: auto;
+  background: #e9e5dc;
+  border: 1px solid #ded8cb;
+  border-radius: 8px;
+}
+
+.reader-viewer .react-pdf__Document {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.reader-viewer .react-pdf__Page {
+  max-width: 100%;
+  height: fit-content;
+  background: white;
+  box-shadow: 0 4px 20px #00000018;
+}
+
+.reader-viewer .react-pdf__Page canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.reader-epub {
+  width: 100%;
+  max-width: 850px;
+  height: 700px;
+  background: #fffdf8;
+  box-shadow: 0 4px 20px #00000012;
+}
+
+.reader-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 0;
+  color: #536458;
+  font-size: 14px;
+}
+
+.reader-controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 17px;
+  border: 1px solid #cfc7b8;
+  border-radius: 5px;
+  background: #fffdf8;
+  color: #243a32;
+  cursor: pointer;
+}
+
+.reader-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.reader-message {
+  display: flex;
+  min-height: 60vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  text-align: center;
+  color: #536458;
+}
+
+.reader-message h2 {
+  color: #292a27;
+  font-family: Georgia, serif;
+}
+
+.reader-message a {
+  color: #536458;
+}
+
+.reader-spinner {
+  animation: reader-spin 1s linear infinite;
+}
+
+.reader-loading {
+  margin: auto;
+  color: #536458;
+}
+
+@keyframes reader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .reader-page {
+    padding: 22px 12px 40px;
+  }
+
+  .reader-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .reader-book-heading {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .reader-format {
+    justify-content: flex-end;
+  }
+
+  .reader-toolbar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .reader-progress-track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .reader-viewer {
+    min-height: 480px;
+    padding: 12px 4px;
+  }
+
+  .reader-epub {
+    height: 550px;
+  }
+
+  .reader-controls {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .reader-controls button {
+    padding: 9px;
+  }
+}

@@ -1,0 +1,254 @@
+.authors-page {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+.authors-heading {
+  margin-bottom: 35px;
+}
+
+.authors-search {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 58px;
+  padding: 0 19px;
+  margin-bottom: 38px;
+  color: #66736a;
+  background: #fff;
+  border: 1px solid #e5e2d9;
+  border-radius: 8px;
+}
+
+.authors-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 17px 0;
+  color: #292a27;
+  font: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.authors-search input::placeholder {
+  color: #9a9c95;
+}
+
+.authors-search button {
+  padding: 7px 10px;
+  color: #526c5c;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.authors-results {
+  margin-top: 30px;
+}
+
+.authors-results-heading {
+  margin-bottom: 25px;
+}
+
+.authors-results-heading h2 {
+  margin: 0 0 6px;
+  color: #293a30;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.authors-results-heading p {
+  margin: 0;
+  color: #85877f;
+  font-size: 13px;
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.author-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #ebe8e0;
+  border-radius: 8px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.author-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgb(35 48 39 / 9%);
+}
+
+.author-card-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 245px;
+  overflow: hidden;
+  background: #eae7dc;
+}
+
+.author-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #718071;
+  background: #eae7dc;
+}
+
+.author-card-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.author-card-label {
+  color: #a68a58;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.author-card-info h3 {
+  margin: 10px 0;
+  color: #293a30;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.author-card-biography {
+  display: -webkit-box;
+  min-height: 58px;
+  overflow: hidden;
+  margin: 0;
+  color: #777b72;
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.author-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 15px;
+  border-top: 1px solid #eeeae1;
+}
+
+.author-card-footer > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #788074;
+  font-size: 12px;
+}
+
+.author-card-footer .author-card-link {
+  color: #354b3d;
+  font-weight: 600;
+}
+
+.authors-message {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px;
+  color: #667968;
+  text-align: center;
+  background: #f7f5ef;
+  border-radius: 8px;
+}
+
+.authors-message h3,
+.authors-message p {
+  margin: 0;
+}
+
+.authors-message h3 {
+  color: #293a30;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.authors-message p {
+  max-width: 470px;
+  color: #777b72;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.authors-message button {
+  margin-top: 8px;
+  padding: 10px 17px;
+  color: white;
+  background: #304b3b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.authors-error {
+  color: #a34c42;
+}
+
+.authors-spinner {
+  animation: authors-spin 1s linear infinite;
+}
+
+@keyframes authors-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 950px) {
+  .authors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .authors-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .author-card-photo {
+    height: 250px;
+  }
+
+  .author-card-info {
+    padding: 18px;
+  }
+}

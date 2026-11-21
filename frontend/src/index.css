@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  /* LIBRIA — Identidad visual */
+  --color-forest: #243A32;
+  --color-forest-light: #344C41;
+  --color-cream: #F3EBDD;
+  --color-cream-light: #FAF7F0;
+  --color-gold: #C5A66B;
+  --color-charcoal: #292A27;
+  --color-muted: #85847D;
+  --color-border: #E5DED1;
+
+  /* Colores funcionales */
+  --bg: var(--color-cream-light);
+  --surface: #FFFFFF;
+  --text: var(--color-charcoal);
+  --text-muted: var(--color-muted);
+  --accent: var(--color-forest);
+  --accent-hover: var(--color-forest-light);
+  --border: var(--color-border);
+
+  /* Tipografías */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Efectos */
+  --shadow-sm: 0 2px 8px rgba(36, 58, 50, 0.05);
+  --shadow-md: 0 8px 24px rgba(36, 58, 50, 0.08);
+  --shadow-lg: 0 16px 40px rgba(36, 58, 50, 0.12);
+
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-forest);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+::selection {
+  background: var(--color-forest);
+  color: var(--color-cream-light);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8C2B5;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-forest);
+}
+
+/* Aplicación */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Transiciones */
+button,
+a,
+input,
+select,
+textarea {
+  transition: all 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

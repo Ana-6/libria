@@ -1,0 +1,120 @@
+
+.profile-page {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  
+  .profile-card {
+    margin-top: 35px;
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  
+  .profile-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: var(--color-forest);
+  }
+  
+  .profile-card-heading h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+  }
+  
+  .profile-card-heading p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  
+  .profile-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  
+  .profile-form-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .profile-form-grid input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+    font-weight: 400;
+    outline: none;
+  }
+  
+  .profile-form-grid input:focus {
+    border-color: var(--color-forest);
+  }
+  
+  .profile-full-width {
+    grid-column: 1 / -1;
+  }
+  
+  .profile-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 25px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 4px;
+    background: var(--color-forest);
+    color: var(--color-cream);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .profile-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+  
+  .profile-success,
+  .profile-error {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  
+  .profile-success {
+    background: #E5EFE6;
+    color: #285D36;
+  }
+  
+  .profile-error {
+    background: #F7E7E5;
+    color: #9B3830;
+  }
+  
+  @media (max-width: 600px) {
+    .profile-card {
+      padding: 22px 17px;
+    }
+  
+    .profile-form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .profile-full-width {
+      grid-column: auto;
+    }
+  }
+  

@@ -1,0 +1,337 @@
+.my-library-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 65px 30px 90px;
+    color: #292a27;
+  }
+  
+  .my-library-header {
+    margin-bottom: 38px;
+  }
+  
+  .library-eyebrow {
+    color: #9b8050;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+  }
+  
+  .my-library-header h1 {
+    margin: 13px 0 10px;
+    color: #243a32;
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 500;
+  }
+  
+  .my-library-header p,
+  .library-toolbar p {
+    color: #77776f;
+    font-size: 14px;
+  }
+  
+  .library-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 55px;
+  }
+  
+  .library-stats article {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 23px;
+    background: #f5f1e9;
+    border: 1px solid #e9e2d6;
+    border-radius: 5px;
+  }
+  
+  .library-stats article > svg {
+    width: 23px;
+    color: #8c754c;
+  }
+  
+  .library-stats article div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .library-stats strong {
+    color: #243a32;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .library-stats span {
+    color: #77776f;
+    font-size: 12px;
+  }
+  
+  .library-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+  
+  .library-toolbar h2 {
+    margin: 0 0 7px;
+    color: #243a32;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 500;
+  }
+  
+  .library-toolbar p {
+    margin: 0;
+  }
+  
+  .library-refresh {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    color: #243a32;
+    background: transparent;
+    border: 1px solid #dcd6ca;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .library-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e9e4dc;
+  }
+  
+  .library-filters button {
+    padding: 9px 17px;
+    color: #66665f;
+    background: transparent;
+    border: 1px solid #e2ddd3;
+    border-radius: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .library-filters button:hover,
+  .library-filters button.active {
+    color: #fff;
+    background: #243a32;
+    border-color: #243a32;
+  }
+  
+  .library-books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+  }
+  
+  .library-book {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #eae6de;
+    border-radius: 5px;
+  }
+  
+  .library-book-cover {
+    position: relative;
+    display: flex;
+    height: 235px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #f1eee7;
+  }
+  
+  .library-book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .library-no-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 80%;
+    color: #718076;
+    text-align: center;
+  }
+  
+  .library-favorite {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    color: #77776f;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .library-favorite.selected {
+    color: #a34e4e;
+  }
+  
+  .library-book-info {
+    padding: 19px;
+  }
+  
+  .library-book-info h3 {
+    margin: 0 0 8px;
+    color: #243a32;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+  }
+  
+  .library-book-info > p {
+    min-height: 18px;
+    margin: 0 0 20px;
+    color: #88877f;
+    font-size: 12px;
+  }
+  
+  .library-book-info label {
+    display: block;
+    margin-bottom: 7px;
+    color: #77776f;
+    font-size: 11px;
+  }
+  
+  .library-book-info select {
+    width: 100%;
+    padding: 10px;
+    color: #343a34;
+    background: #faf9f6;
+    border: 1px solid #e4dfd5;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  .library-progress {
+    margin-top: 18px;
+  }
+  
+  .library-progress > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #77776f;
+    font-size: 11px;
+  }
+  
+  .library-progress strong {
+    color: #243a32;
+  }
+  
+  .library-progress-track {
+    height: 5px;
+    overflow: hidden;
+    background: #eae7df;
+    border-radius: 5px;
+  }
+  
+  .library-progress-track span {
+    display: block;
+    height: 100%;
+    background: #8c9b7f;
+    border-radius: 5px;
+  }
+  
+  .library-remove {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+    padding: 0;
+    color: #9b6260;
+    background: none;
+    border: none;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  
+  .library-empty {
+    display: flex;
+    min-height: 260px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    color: #8b8a80;
+    background: #f8f6f1;
+    border: 1px dashed #ddd6c9;
+    text-align: center;
+  }
+  
+  .library-empty h3 {
+    margin: 18px 0 7px;
+    color: #243a32;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  
+  .library-empty p {
+    font-size: 13px;
+  }
+  
+  .library-message,
+  .library-error {
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  
+  .library-message {
+    color: #426b4b;
+  }
+  
+  .library-error {
+    color: #a34e4e;
+  }
+  
+  @media (max-width: 850px) {
+    .library-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .library-books-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .my-library-page {
+      padding: 40px 18px 65px;
+    }
+  
+    .library-stats {
+      gap: 10px;
+    }
+  
+    .library-stats article {
+      padding: 15px;
+    }
+  
+    .library-books-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .library-book-cover {
+      height: 260px;
+    }
+  }

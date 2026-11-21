@@ -1,0 +1,370 @@
+
+.libria-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+  }
+  
+  .libria-page-header {
+    min-height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 20;
+  }
+  
+  .libria-page-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-forest);
+    font-family: var(--font-heading);
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  
+  .libria-page-logo svg {
+    color: var(--color-gold);
+  }
+  
+  .libria-page-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .libria-page-nav a {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .libria-page-nav a:hover,
+  .libria-page-nav a.active {
+    color: var(--color-forest);
+  }
+  
+  .libria-page-nav a.active {
+    font-weight: 700;
+  }
+  
+  .libria-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .libria-guest-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .libria-login-link {
+    color: var(--color-forest);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .libria-register-link {
+    padding: 11px 18px;
+    color: var(--color-cream);
+    background: var(--color-forest);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .libria-register-link:hover {
+    opacity: 0.88;
+  }
+  
+  /* PERFIL */
+  
+  .libria-profile-container {
+    position: relative;
+  }
+  
+  .libria-profile-button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: var(--surface);
+    color: var(--color-forest);
+    cursor: pointer;
+  }
+  
+  .libria-profile-button:hover,
+  .libria-profile-button.active {
+    background: var(--bg);
+  }
+  
+  .libria-avatar {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-forest);
+    color: var(--color-cream);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .libria-profile-name {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .libria-profile-dropdown {
+    position: absolute;
+    top: calc(100% + 13px);
+    right: 0;
+    width: 250px;
+    padding: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+  }
+  
+  .libria-dropdown-user {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+  }
+  
+  .libria-dropdown-user strong {
+    color: var(--color-forest);
+    font-size: 14px;
+  }
+  
+  .libria-dropdown-user span {
+    color: var(--text-muted);
+    font-size: 11px;
+    overflow-wrap: anywhere;
+  }
+  
+  .libria-dropdown-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 7px 0;
+  }
+  
+  .libria-profile-dropdown a,
+  .libria-logout-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .libria-profile-dropdown a:hover {
+    background: var(--bg);
+    color: var(--color-forest);
+  }
+  
+  .libria-logout-button {
+    color: #A34B42;
+  }
+  
+  .libria-logout-button:hover {
+    background: rgba(163, 75, 66, 0.08);
+  }
+  
+  /* OTROS ELEMENTOS */
+  
+  .libria-mobile-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--color-forest);
+    cursor: pointer;
+  }
+  
+  .libria-back-home {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--color-forest);
+    font-size: 13px;
+  }
+  
+  .libria-page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 75px 7%;
+    flex: 1;
+  }
+  
+  .libria-page-footer {
+    padding: 35px 7%;
+    text-align: center;
+    background: var(--color-forest);
+    color: var(--color-cream);
+  }
+  
+  .libria-page-footer > span {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+  
+  .libria-page-footer p {
+    margin: 8px 0;
+    color: #D6D4C9;
+  }
+  
+  .libria-page-footer small {
+    color: #B6B9AF;
+    font-size: 11px;
+  }
+  
+  .libria-section-label {
+    color: #A68A58;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  
+  .libria-page-title {
+    margin: 14px 0;
+    font-size: clamp(36px, 5vw, 54px);
+  }
+  
+  .libria-page-description {
+    max-width: 650px;
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+  
+  .libria-coming-soon {
+    margin-top: 45px;
+    padding: 45px 25px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    text-align: center;
+  }
+  
+  .libria-coming-soon svg {
+    color: var(--color-gold);
+    margin-bottom: 15px;
+  }
+  
+  .libria-coming-soon h2 {
+    font-size: 25px;
+  }
+  
+  .libria-coming-soon p {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1050px) {
+    .libria-page-header {
+      padding: 0 4%;
+      gap: 15px;
+    }
+  
+    .libria-page-nav {
+      gap: 15px;
+    }
+  
+    .libria-back-home {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .libria-page-header {
+      min-height: 75px;
+      padding: 15px 5%;
+      flex-wrap: wrap;
+    }
+  
+    .libria-mobile-toggle {
+      display: block;
+      margin-left: auto;
+    }
+  
+    .libria-page-nav {
+      display: none;
+      order: 4;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 15px 0;
+    }
+  
+    .libria-page-nav.mobile-open {
+      display: flex;
+    }
+  
+    .libria-header-actions {
+      order: 3;
+    }
+  
+    .libria-profile-name {
+      display: none;
+    }
+  
+    .libria-profile-dropdown {
+      right: 0;
+    }
+  
+    .libria-guest-actions {
+      gap: 10px;
+    }
+  
+    .libria-register-link {
+      padding: 9px 12px;
+    }
+  
+    .libria-page-content {
+      padding: 50px 6%;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .libria-page-logo {
+      font-size: 21px;
+    }
+  
+    .libria-login-link {
+      font-size: 11px;
+    }
+  
+    .libria-register-link {
+      font-size: 11px;
+    }
+  }
+  

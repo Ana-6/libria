@@ -1,0 +1,331 @@
+
+.explore-page {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+  }
+  
+  .explore-heading {
+    margin-bottom: 34px;
+  }
+  
+  .explore-search {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 19px;
+    margin-bottom: 28px;
+    color: #66736a;
+    background: #fff;
+    border: 1px solid #e5e2d9;
+    border-radius: 8px;
+  }
+  
+  .explore-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 17px 0;
+    color: #292a27;
+    font: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .explore-search input::placeholder {
+    color: #9a9c95;
+  }
+  
+  .explore-search button {
+    padding: 7px 10px;
+    color: #526c5c;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .explore-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid #e7e3d9;
+    border-bottom: 1px solid #e7e3d9;
+  }
+  
+  .explore-filter-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #354b3d;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .explore-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .explore-filters select {
+    min-width: 155px;
+    padding: 11px 13px;
+    color: #42473f;
+    font: inherit;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid #e3e0d7;
+    border-radius: 6px;
+    outline-color: #526c5c;
+    cursor: pointer;
+  }
+  
+  .explore-results {
+    margin-top: 35px;
+  }
+  
+  .explore-results-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .explore-results-heading h2 {
+    margin: 0 0 6px;
+    color: #293a30;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .explore-results-heading p {
+    margin: 0;
+    color: #85877f;
+    font-size: 13px;
+  }
+  
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px 23px;
+  }
+  
+  .explore-book {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ebe8e0;
+    border-radius: 8px;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+  
+  .explore-book:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgb(35 48 39 / 9%);
+  }
+  
+  .explore-book-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 255px;
+    overflow: hidden;
+    background: #eae7dc;
+  }
+  
+  .explore-book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .explore-no-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #667968;
+  }
+  
+  .explore-no-cover span {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+  
+  .explore-book-info {
+    padding: 17px;
+  }
+  
+  .explore-book-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 11px;
+  }
+  
+  .explore-book-categories span {
+    padding: 5px 8px;
+    color: #526b59;
+    background: #edf0e9;
+    border-radius: 3px;
+    font-size: 10px;
+  }
+  
+  .explore-book-info h3 {
+    margin: 0 0 7px;
+    color: #293a30;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  
+  .explore-book-author {
+    margin: 0;
+    color: #777b72;
+    font-size: 12px;
+  }
+  
+  .explore-book-meta {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    color: #888a82;
+    font-size: 11px;
+  }
+  
+  .explore-book-description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 12px 0 0;
+    color: #686d65;
+    font-size: 12px;
+    line-height: 1.6;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  .explore-message {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px;
+    color: #667968;
+    text-align: center;
+    background: #f7f5ef;
+    border-radius: 8px;
+  }
+  
+  .explore-message h3,
+  .explore-message p {
+    margin: 0;
+  }
+  
+  .explore-message h3 {
+    color: #293a30;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  
+  .explore-message p {
+    color: #777b72;
+    font-size: 14px;
+  }
+  
+  .explore-message button {
+    margin-top: 8px;
+    padding: 10px 17px;
+    color: white;
+    background: #304b3b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .explore-error {
+    color: #a34c42;
+  }
+  
+  .explore-spinner {
+    animation: explore-spin 1s linear infinite;
+  }
+  
+  @keyframes explore-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .explore-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .explore-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+    }
+  
+    .explore-book-cover {
+      height: 210px;
+    }
+  
+    .explore-book-info {
+      padding: 12px;
+    }
+  
+    .explore-book-info h3 {
+      font-size: 16px;
+    }
+  
+    .explore-toolbar {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .explore-filters {
+      width: 100%;
+    }
+  
+    .explore-filters select {
+      flex: 1;
+      min-width: 0;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .explore-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+  
+    .explore-book-cover {
+      height: 175px;
+    }
+  
+    .explore-book-description {
+      display: none;
+    }
+  }
+
+  a.explore-book {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  
